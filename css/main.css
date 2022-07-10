@@ -1,6 +1,7 @@
 /* Variables Start */
 :root {
     --background-color: hsl(0, 0%, 95%);
+    --main-border-radius: 8px;
 }
 /* Variables End */
 /* Global Rules Start */
@@ -12,7 +13,6 @@
     padding: 0;
 }
 body {
-    /*font-family: 'Big Shoulders Display', cursive;*/
     font-family: 'Lexend Deca', sans-serif;
     background-color: var(--background-color);
     min-height: 100vh;
@@ -36,22 +36,27 @@ main section {
     padding: 30px;
 }
 main section .card {
-    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 50px 50px;
+    gap: 20px;
     height: 500px;
+    position: relative;
+}
+main section .card img {
+    width: 70px;
 }
 main section .card h2 {
     font-family: 'Big Shoulders Display', cursive;
     text-transform: uppercase;
     font-size: 40px;
     color: var(--background-color);
-    margin: 20px 0;
 }
 main section .card p {
     color: hsla(0, 0%, 100%, 0.75);
     font-size: 15px;
     line-height: 1.7;
-    padding-right: 50px;
-    margin-bottom: 140px;
 }
 main section .card a {
     display: block;
@@ -59,13 +64,8 @@ main section .card a {
     padding: 15px 30px;
     width: fit-content;
     border-radius: 30px;
-    margin-top: -20px;
-}
-@media (max-width: 981px) {
-    main section .card p {
-        padding-right: 10px;
-        margin-bottom: 110px;
-    }
+    position: absolute;
+    bottom: 50px;
 }
 main section .card a:hover {
     background-color: transparent;
@@ -74,8 +74,8 @@ main section .card a:hover {
 }
 main section .one {
     background-color: hsl(31, 77%, 52%);
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
+    border-top-left-radius: var(--main-border-radius);
+    border-bottom-left-radius: var(--main-border-radius);
 }
 main section .one a {
     color: hsl(31, 77%, 52%);
@@ -88,45 +88,34 @@ main section .two a {
 }
 main section .three {
     background-color: hsl(179, 100%, 13%);
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
+    border-top-right-radius: var(--main-border-radius);
+    border-bottom-right-radius: var(--main-border-radius);
 }
 main section .three a {
     color: hsl(179, 100%, 13%);
 }
 @media (min-width: 637px) and (max-width: 905px) {
-    main section .card p {
-        padding-right: 10px;
-        margin-bottom: 110px;
-    }
     main section .one {
         border-bottom-left-radius: 0px;
     }
     main section .two {
-        border-bottom-right-radius: 12px;
-        border-top-right-radius: 12px;
+        border-bottom-right-radius: var(--main-border-radius);
+        border-top-right-radius: var(--main-border-radius);
     }
     main section .three {
-        border-bottom-right-radius: 12px;
+        border-bottom-right-radius: var(--main-border-radius);
         border-top-right-radius: 0;
     }
 }
 @media (max-width: 636px) {
-    main section .card {
-        height: 400px;
-    }
-    main section .card p {
-        padding-right: 30px;
-        margin-bottom: 50px;
-    }
     main section .one {
         border-bottom-left-radius: 0px;
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
+        border-top-left-radius: var(--main-border-radius);
+        border-top-right-radius: var(--main-border-radius);
     }
     main section .three {
-        border-bottom-left-radius: 12px;
-        border-bottom-right-radius: 12px;
+        border-bottom-left-radius: var(--main-border-radius);
+        border-bottom-right-radius: var(--main-border-radius);
         border-top-right-radius: 0;
     }
 }
