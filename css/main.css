@@ -1,0 +1,140 @@
+/* Variables Start */
+:root {
+    --background-color: hsl(0, 0%, 95%);
+}
+/* Variables End */
+/* Global Rules Start */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    /*font-family: 'Big Shoulders Display', cursive;*/
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+a {
+    text-decoration: none;
+}
+/* Global Rules End */
+h1 {
+    position: absolute;
+    opacity: 0;
+}
+main section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    border-radius: 16px;
+    padding: 30px;
+}
+main section .card {
+    padding: 30px;
+    height: 500px;
+}
+main section .card h2 {
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: var(--background-color);
+    margin: 20px 0;
+}
+main section .card p {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 15px;
+    line-height: 1.7;
+    padding-right: 50px;
+    margin-bottom: 140px;
+}
+main section .card a {
+    display: block;
+    background-color: var(--background-color);
+    padding: 15px 30px;
+    width: fit-content;
+    border-radius: 30px;
+    margin-top: -20px;
+}
+@media (max-width: 981px) {
+    main section .card p {
+        padding-right: 10px;
+        margin-bottom: 110px;
+    }
+}
+main section .card a:hover {
+    background-color: transparent;
+    color: var(--background-color);
+    border: 2px solid var(--background-color);
+}
+main section .one {
+    background-color: hsl(31, 77%, 52%);
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+main section .one a {
+    color: hsl(31, 77%, 52%);
+}
+main section .two {
+    background-color: hsl(184, 100%, 22%);
+}
+main section .two a {
+    color: hsl(184, 100%, 22%);
+}
+main section .three {
+    background-color: hsl(179, 100%, 13%);
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+main section .three a {
+    color: hsl(179, 100%, 13%);
+}
+@media (min-width: 637px) and (max-width: 905px) {
+    main section .card p {
+        padding-right: 10px;
+        margin-bottom: 110px;
+    }
+    main section .one {
+        border-bottom-left-radius: 0px;
+    }
+    main section .two {
+        border-bottom-right-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+    main section .three {
+        border-bottom-right-radius: 12px;
+        border-top-right-radius: 0;
+    }
+}
+@media (max-width: 636px) {
+    main section .card {
+        height: 400px;
+    }
+    main section .card p {
+        padding-right: 30px;
+        margin-bottom: 50px;
+    }
+    main section .one {
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+    main section .three {
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        border-top-right-radius: 0;
+    }
+}
+/* Footer */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
